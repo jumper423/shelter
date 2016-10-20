@@ -1,6 +1,6 @@
 Приют животных.
 =============
-[![Build Status](https://travis-ci.org/jumper423/file-iterator.svg?branch=master)](https://travis-ci.org/jumper423/file-iterator)
+[![Build Status](https://travis-ci.org/jumper423/shelter.svg?branch=master)](https://travis-ci.org/jumper423/shelter)
 
 Реализовать набор классов для управления приютом для животных. 
 Приют может содержать три типа животных – кошки, собаки, черепахи. 
@@ -23,13 +23,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist jumper423/file-iterator
+php composer.phar require --prefer-dist jumper423/shelter
 ```
 
 or add
 
 ```json
-"jumper423/yfile-iterator": "*"
+"jumper423/shelter": "*"
 ```
 
 to the `require` section of your composer.json.
@@ -37,21 +37,7 @@ to the `require` section of your composer.json.
 Usage & Documentation
 ------------
 ```php
-$fileIterator = new \jumper423\FileIterator(__DIR__ . '/file');
-$fileIterator->rewind();
-$fileIterator->next();
-$fileIterator->next();
-$fileIterator->seek(3);
-$fileIterator->next();
-echo $fileIterator->current();
-$fileIterator->next();
-echo $fileIterator->current();
-$fileIterator->seek(9);
-$fileIterator->next();
-$fileIterator->next();
-if ($fileIterator->valid()) {
-    ...
-}
+
 ```
 
 ## Tests

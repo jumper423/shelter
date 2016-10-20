@@ -2,6 +2,6 @@
 
 namespace jumper423;
 
-class Turtle
+class Turtle extends Animal
 {
 }

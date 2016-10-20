@@ -2,6 +2,6 @@
 
 namespace jumper423;
 
-class Cat extends Animal
+class People
 {
 }
