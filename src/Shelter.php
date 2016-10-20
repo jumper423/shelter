@@ -2,6 +2,10 @@
 
 namespace jumper423;
 
+/**
+ * Class Shelter
+ * @package jumper423
+ */
 class Shelter
 {
     private static $instance = null;
@@ -47,5 +51,24 @@ class Shelter
             return $animal1->getNickname() <=> $animal2->getNickname();
         });
         return $animals;
+    }
+
+    /**
+     * @param null $type
+     * @return Animal|false
+     */
+    public function transferAnimal($type = null) {
+        if (is_null($type)) {
+            return array_shift($this->animals);
+        } else {
+            foreach ($this->animals as $key => &$animal) {
+                if ($animal instanceof $type) {
+                    $animalResult = $animal;
+                    unset($this->animals[$key]);
+                    return $animalResult;
+                }
+            }
+        }
+        return false;
     }
 }
