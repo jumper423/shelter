@@ -16,14 +16,14 @@ class Animal
     /**
      * @return string
      */
-    public function getNickname() : string {
+    public function getNickname() {
         return $this->nickname;
     }
 
     /**
      * @return int
      */
-    public function getAge() : int {
+    public function getAge() {
         return $this->age;
     }
 

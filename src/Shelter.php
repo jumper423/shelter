@@ -39,15 +39,15 @@ class Shelter
     }
 
     /**
-     * @param Animal $type
+     * @param string $type
      * @return Animal[]
      */
-    public function viewAnimal(Animal $type)
+    public function viewAnimal(string $type)
     {
         $animals = array_filter($this->animals, function (Animal $animal) use ($type) {
             return $animal instanceof $type;
         });
-        uasort($animals, function (Animal $animal1, Animal $animal2) {
+        usort($animals, function (Animal $animal1, Animal $animal2) {
             return $animal1->getNickname() <=> $animal2->getNickname();
         });
         return $animals;
@@ -70,5 +70,9 @@ class Shelter
             }
         }
         return false;
+    }
+
+    public function killAnimals(){
+        $this->animals = [];
     }
 }
