@@ -1,5 +1,6 @@
 Приют животных.
-=============
+===============
+[![PHP version](https://badge.fury.io/ph/jumper423%2Fshelter.svg)](https://badge.fury.io/ph/jumper423%2Fshelter)
 [![Build Status](https://travis-ci.org/jumper423/shelter.svg?branch=master)](https://travis-ci.org/jumper423/shelter)
 
 Реализовать набор классов для управления приютом для животных. 
