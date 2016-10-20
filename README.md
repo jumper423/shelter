@@ -37,7 +37,24 @@ to the `require` section of your composer.json.
 Usage & Documentation
 ------------
 ```php
+$shelter = \jumper423\Shelter::getInstance();
 
+$cat1 = new \jumper423\Cat();
+$shelter->newAnimal($cat1);
+$dog1 = new \jumper423\Dog();
+$shelter->newAnimal($dog1);
+$dog2 = new \jumper423\Dog();;
+$shelter->newAnimal($dog2);
+
+$animalsCats = $shelter->viewAnimal(\jumper423\Cat::class);
+$animalsDogs = $shelter->viewAnimal(\jumper423\Dog::class);
+
+$people = new \jumper423\People();
+$animal1= $shelter->transferAnimal(\jumper423\Cat::class);
+$people->newAnimal($animal1);
+
+$animal2 = $shelter->transferAnimal();
+$people->newAnimal($animal2);
 ```
 
 ## Tests
